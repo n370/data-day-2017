@@ -17,4 +17,5 @@ Utilizando la aplicación QGIS, importe como una nueva capa vetorial el archivo 
 ### Mesclando los geodatos con los metadatos
 
 Oprima [aquí](https://docs.google.com/spreadsheets/d/1DIvR2icfxcFZaQJhh22CBFHVulte8z1KxUjNJiP9FNs/edit#gid=1205598755)
- para acceder a los metadatos de las vías de la ciudad de Montevideo. Utilizando el ratón seleccione la opción _descargar como_ que se encuentra en el menu ```Archivo > Descargar como```. En seguida seleccione la opción que dice CSV. Guardálo preferencialmente junto al archivo de geodatos generado anteriormente.
+ para acceder a los metadatos de las vías de la ciudad de Montevideo. Utilizando el ratón seleccione la opción _descargar como_ que se encuentra en el menu ```Archivo > Descargar como```. En seguida seleccione la opción que dice CSV. Guárdalo junto al archivo de geodatos generado anteriormente.
+
