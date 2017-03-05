@@ -8,19 +8,19 @@ var paths = ['../../data/metadatos.csv', '../../data/geodatos.geojson']
 async.waterfall([
     readDataFiles,
     parseCSV
-], (err, dataset) => { merge(dataset) })
+], (err, metadatos, geodatos) => merge(geodatos, metadatos))
 
 function readDataFiles(callback) {
   async.map(paths, fs.readFile, (err, results) => {
-    callback(null, results)
+    if (err) process.stdout.write(err)
+    results.map(result => result.toString('utf8'))
+    callback(null, results[0], results[1])
   })
 }
 
-function parseCSV(results, callback) {
-  csv.parse(results[0], (err, data) => {
-    callback(null, JSON.stringify({
-      geodatos: results[1],
-      metadatos: data
-    }))
+function parseCSV(metadatos, geodatos, callback) {
+  csv.parse(metadatos, (err, metadatos) => {
+    if (err) process.stdout.write(err)
+    callback(null, JSON.stringify(metadatos), geodatos)
   })
 }
